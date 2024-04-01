@@ -10,104 +10,49 @@ export const FADE_UP_ANIMATION = {
 };
 const Hero = () => {
   return (
-    <>
-      <motion.div
-        className="flex min-h-[calc(100vh-5rem)] w-full flex-col items-center justify-center gap-14 text-center lg:mb-0"
-        initial="hidden"
-        animate="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.15,
-            },
-          },
-        }}
-      >
-        <div className="flex flex-col items-center justify-center gap-6">
-          <motion.h1
-            className="flex flex-col text-4xl font-semibold sm:gap-3 sm:text-5xl xl:text-6xl/none"
-            variants={FADE_UP_ANIMATION}
-          >
-            Search for any UK company <br />{" "}
-            <span className="relative text-primary">
-              with{" "}
-              <span>
-                ease
-                {/* <Box className="absolute top-0 md:block hidden md:right-[20px] lg:right-[40px]" /> */}
-              </span>
-            </span>
-          </motion.h1>
-          <motion.p
-            className="max-w-xs text-sm text-black sm:max-w-full sm:text-base"
-            variants={FADE_UP_ANIMATION}
-          >
-            Capitalshouse is a simple and intuitive company finder that helps
-            you search for any business <br className="hidden md:block" />
-            with ease and speed.
-          </motion.p>
-          <motion.div
-            className="flex items-center justify-center gap-6"
-            variants={FADE_UP_ANIMATION}
-          >
-            <Link href="#pricing">
-              <Button variant="default" className="flex items-center gap-2">
-                <PlaneIcon />
-                Start free trial
-              </Button>
-            </Link>
+<section>
+  <div className="w-full mx-auto  max-w-screen-2xl  px-8 mt-24 pt-24 text-center   ">
+    <p className="text-2xl lg:text-7xl tracking-tighter text-white font-medium uppercase">
+      Explore our <span className="text-accent-500">directory</span> 
+       
+    </p>
+    <p className="text-2xl lg:text-7xl md:mt-4  tracking-wide  uppercase text-white font-medium">
+       for all your needs
+    </p>
+       
 
-            {/* <Button variant='secondary'>Learn more</Button> */}
-          </motion.div>
+    <div className="max-w-lg mt-12 mx-auto">
+      <label htmlFor="search" className="sr-only">Quick search</label>
+      <div className="relative inline-flex w-full items-center">
+        <input
+          placeholder="Search for topics, titles and authors..."
+          type="text"
+          name="search"
+          id="search"
+          className="block items-center pl-12 w-full rounded-full h-14 border-0 bg-zinc-800  relative  border-trasnparent py-1.5 pr-14 text-white ring-0 ring-inset ring-transparent placeholder:text-zinc-400 focus:ring-2 focus:ring-inset focus:ring-accent-500 sm:text-sm sm:leading-6"
+        />
+        <div className="absolute inset-y-0 left-0 flex py-5 pl-4">
+          <svg
+            className="inline-flex items-center w-4 h-4 text-zinc-400"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            ><path
+              fill="currentColor"
+              d="m29 27.586l-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9a9.01 9.01 0 0 1-9-9Z"
+            >
+            </path></svg
+          >
         </div>
-        {/* <div className='flex flex-col items-center justify-center gap-20'>
-          <div className='flex flex-col items-center gap-5'>
-            <div className='flex items-center justify-center'>
-              {Users.map((user, index) => {
-                return (
-                  <Image
-                    key={index}
-                    src={user.image}
-                    alt='User'
-                    height={40}
-                    width={40}
-                    objectFit='cover'
-                    className='-m-[5px] rounded-full border border-white'
-                  />
-                );
-              })}
-            </div>
-            <p className='text-sm text-gray-600'>
-              Trusted by over{' '}
-              <span className='text-base font-semibold text-primary'>
-                1,000+
-              </span>{' '}
-              businesses worldwide
-            </p>
-          </div>
-        </div> */}
-      </motion.div>
-    </>
+      </div>
+    </div>
+  
+  </div>
+</section>
+
+
   );
 };
 
 export default Hero;
 
-const Users = [
-  {
-    image: "/images/users/1.png",
-  },
-  {
-    image: "/images/users/2.png",
-  },
-  {
-    image: "/images/users/3.png",
-  },
-  {
-    image: "/images/users/4.png",
-  },
-  {
-    image: "/images/users/5.png",
-  },
-];
+
